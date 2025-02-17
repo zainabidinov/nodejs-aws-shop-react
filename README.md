@@ -1,38 +1,24 @@
-# React-shop-cloudfront
+## ✅ Overview  
 
-This is frontend starter project for nodejs-aws mentoring program. It uses the following technologies:
+The MyShop! application was successfully deployed using **both manual and automated approaches**.  
 
-- [Vite](https://vitejs.dev/) as a project bundler
-- [React](https://beta.reactjs.org/) as a frontend framework
-- [React-router-dom](https://reactrouterdotcom.fly.dev/) as a routing library
-- [MUI](https://mui.com/) as a UI framework
-- [React-query](https://react-query-v3.tanstack.com/) as a data fetching library
-- [Formik](https://formik.org/) as a form library
-- [Yup](https://github.com/jquense/yup) as a validation schema
-- [Vitest](https://vitest.dev/) as a test runner
-- [MSW](https://mswjs.io/) as an API mocking library
-- [Eslint](https://eslint.org/) as a code linting tool
-- [Prettier](https://prettier.io/) as a code formatting tool
-- [TypeScript](https://www.typescriptlang.org/) as a type checking tool
+### **Manual Deployment**  
+- Configured an **S3 bucket** to host the application.  
+- Uploaded the application **manually** and verified accessibility.  
+- Set up a **CloudFront distribution** for optimized delivery.  
+- Ensured S3 access is **restricted** (S3 URL returns **403 Access Denied**).  
 
-## Available Scripts
+### **Automated Deployment (AWS CDK)**  
+- Used **AWS CDK** to automate **S3 bucket creation** and deployment.  
+- Configured **CloudFront distribution** with correct access policies.  
+- Implemented **automatic cache invalidation** upon redeployment.  
+- Verified the **entire process works with a single command**:  
 
-### `start`
 
-Starts the project in dev mode with mocked API on local environment.
-
-### `build`
-
-Builds the project for production in `dist` folder.
-
-### `preview`
-
-Starts the project in production mode on local environment.
-
-### `test`, `test:ui`, `test:coverage`
-
-Runs tests in console, in browser or with coverage.
-
-### `lint`, `prettier`
-
-Runs linting and formatting for all files in `src` folder.
+### **Deployment Links**
+### *Manual Deployment*
+CloudFront URL: https://d19l5ae2bxvzly.cloudfront.net
+S3 Bucket URL: https://my-aws-s3-shop-bucket.s3.eu-central-1.amazonaws.com/index.html (Expected 403 Access Denied)
+### *Automated Deployment (AWS CDK)*
+CloudFront URL: https://d1j6kr2mg60m2q.cloudfront.net
+S3 Bucket URL: http://shopwebappstack-myshopbucket3363d19f-eibyc6ggbm0w.s3-website.eu-central-1.amazonaws.com/ (Expected 403 Access Denied)
